@@ -1,0 +1,102 @@
+/*
+This is a simple CSS responsive framework for a very basic site.
+
+This framework has been developed by @SaymoreChifamba to satisfy the requirements for the
+HTML, CSS and Java-script course.
+
+14/12/2016
+*/
+
+/********** Base styles **********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+    font-size: 1.75em;
+    margin: 20px;
+    text-align: center;
+}
+
+section {
+    font-size: 1.25em;
+    margin: 20px;
+    background-color: #c0c0c0;
+    border: 1px solid black;
+}
+
+section > p:nth-child(1) {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    border: 1px solid black;
+}
+
+section > p:nth-child(2) {
+    padding: 15px;
+}
+
+.row {
+    width: 100%;
+}
+
+#chicken {
+    background-color: #ff00ff;
+    font-weight: bold;
+}
+
+#beef {
+    background-color: #dc143c;
+    font-weight: bold;
+    color: white;
+}
+
+#sushi {
+    background-color: #f0e68c;
+    font-weight: bold;
+}
+
+/********** Large devices only: Desktops **********/
+@media (min-width: 992px) {
+    /*they will have have three equal divisions*/
+    .col-lg-4 {
+        float: left;
+        width: 33.33%;
+    }
+}
+
+/********** Medium devices only: Tablets; **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    /*the fist two sections have 50% width. The third one has 100%width*/
+    .col-md-6, .col-md-12 {
+        float: left;
+    }
+
+    section:nth-child(3) {
+        clear: left;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+}
+
+/********** Small devices devices only: Mobile phones **********/
+@media (max-width: 767px) {
+    /*they will have have three equal divisions*/
+    .col-sm-12 {
+        width: 100%;
+    }
+}
