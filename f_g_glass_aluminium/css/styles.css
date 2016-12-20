@@ -361,6 +361,10 @@ h3 + ul.why-aluminium {
 
 /*Quotation page */
 
+#contact-form {
+  color: black;
+}
+
 input, textarea {
   margin-top: 15px;
 }
