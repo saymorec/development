@@ -38,7 +38,7 @@ body {
 #nav-list li:hover {
 	background-color: #f43;
 }
-#section-items {
+#section-items section {
 	background-color: gray;
 	color: #000;
 }
