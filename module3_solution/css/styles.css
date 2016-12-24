@@ -1,14 +1,15 @@
 body {
   font-size: 16px;
   color: #701409;
-  background-color: #D9D9D9;  /*Aluminium color*/
+  /*background-color: #D9D9D9;  /*Aluminium color*/*/
   font-family: 'Oxygen', sans-serif;
 }
 /** HEADER **/
 #header-nav {
   border-radius: 0;
   border: 0;
-  min-height: 100px
+  min-height: 100px;
+  background-color: gray;
 }
 #header-nav h1 {
   font-weight: bold;
@@ -17,20 +18,31 @@ body {
 .navbar-brand {
   padding-top: 10px;
 }
+.icon-bar {
+	border: 2px solid #701409;
+}
 #company-name h1 {
 	color: #701409;
 }
 #company-name a {
 	text-decoration: none;
 }
-.navbar-toggle {
-	margin-top: 40px;
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: 40px;
 }
 #nav-list {
 	background-color: #701409;
 	font-size: 1.3em;
-	margin-top: 0;
 	margin-bottom: 0;
+	margin-top: 0;
+}
+#nav-list a {
+	border: 1px solid #fff;
+}
+#collapsable-nav {
+	margin-left: -20px;
+	margin-right: -20px;
 }
 #nav-list a {
 	color: #fff;
@@ -44,4 +56,16 @@ body {
 }
 #header-text {
 	margin-bottom: 40px;
+}
+section {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+
+section p {
+	margin-top: 20px;
+}
+h1, h3 {
+	font-weight: bold;
 }
