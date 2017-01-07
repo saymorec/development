@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngulaJS app</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="LunchCheckController">
+		<div>
+			<input type="text" ng-model="name" ng-class="colorClass"/>
+			<label><b>NB:</b> Empty items are not counted!!</label>
+			<br>
+			<button ng-click="lunchChecker()">Check If Too Much</button>
+		</div>
+
+		<div>
+			{{ message }}
+		</div>
+    </div>
+
+
+</body>
+
+</html>
