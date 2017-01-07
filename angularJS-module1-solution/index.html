@@ -12,11 +12,13 @@
 
 <body>
 
+	<h1>Lunch checker</h1>
+
+
     <div ng-controller="LunchCheckController">
+    	<p>*Empty items are not counted!!</p>
 		<div>
-			<input type="text" ng-model="name" ng-class="colorClass"/>
-			<label><b>NB:</b> Empty items are not counted!!</label>
-			<br>
+			<input type="text" ng-model="name" ng-class="colorClass" class="form-control" placeholder="list comma separated dishes you usually have for lunch"/>
 			<button ng-click="lunchChecker()" ng-blur="cssClassReset()">Check If Too Much</button>
 		</div>
 

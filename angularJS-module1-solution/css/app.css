@@ -2,39 +2,42 @@ body {
   font-size: 1.4em;
   background-color: #f0f8ff;
 }
-
 body > div {
 	margin-top: 100px;
 	margin-left: 20%;
 }
-
 div + div {
 	margin-top: 50px;
 }
-
-button {
-	margin-top: 20px;
-}
-
-label {
-	font-size: 0.8em;
-	color: #000080;
-	margin-left: 30px;
-}
-
 div > div:nth-child(2) {
 	color: #4b0082;
 	font-size: 1em;
 }
-
+button {
+	margin-top: 20px;
+	height: 34px;
+  	padding: 6px 12px;
+  	font-size: 14px;
+}
+h1, h6 {
+	margin-left: 30%;
+	color: #000080;
+}
 .green-class {
 	color: green;
 	border: 1px solid green;
 }
-
 .red-class {
 	color: red;
 	border: 1px solid red;
 }
-
-.default-class {}
+.default-class {
+}
+.form-control {
+	display: block;
+	width: 60%;
+	height: 34px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 14px;
+}
