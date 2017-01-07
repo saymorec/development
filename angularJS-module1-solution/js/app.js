@@ -6,6 +6,8 @@ angular.module('LunchCheck', [])
 
 	LunchCheckController.$inject = ['$scope'];
 
+	var cssClasses = ["default-class", "red-class", "green-class"]
+
 	function stripEmptyItems (inputArray) {
 		// This function strips off empty items from inputArray
 		var newArray = [];
@@ -18,7 +20,6 @@ angular.module('LunchCheck', [])
 	};
 
 	function LunchCheckController($scope) {
-		var cssClasses = ["default-class", "red-class", "green-class"]
 		$scope.name = "";
 		$scope.message = "";
 		$scope.colorClass = cssClasses[0];
@@ -44,6 +45,12 @@ angular.module('LunchCheck', [])
 	  			$scope.colorClass = cssClasses[2];
 	  		}
 	  };
-	}
+
+	  $scope.cssClassReset = function () {
+	  	$scope.name = "";
+	  	$scope.message = "";
+	  	$scope.colorClass = cssClasses[0];
+	  };
+	};
 
 })();
