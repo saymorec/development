@@ -102,7 +102,7 @@ body {
 .dropdown-menu {
   background-color: #308D29;
 }
-#call-btn > a {
+.call-btn > a {
   font-size: 1.5em;
   display: block;
   margin: 0 20px;
@@ -111,11 +111,11 @@ body {
   background-color: #800000;
   color: #fff;
 }
-#call-btn > a:hover {
+.call-btn > a:hover {
   background-color: #F9CF00;
 }
 
-#call-btn + #myCarousel {
+#quote-btn + div {
   margin-top: 20px;
 }
 /* END HEADER */
@@ -273,7 +273,9 @@ h2 {
 h3 {
   color: #556b2f;
 }
-
+li > span {
+  color: green;
+}
 /*About us*/
 
 #about-us p {
@@ -442,11 +444,15 @@ textarea {
     font-size: 5vw;
   }
 
-  #collapsable-nav a { /* Collapsed nav menu text */
-    font-size: 1.2em;
-    margin-top: 200px
+  #tile-header {
+    font-size: 1.5em;
   }
-  #collapsable-nav a span { /* Collapsed nav menu glyph */
+
+  #bs-example-navbar-collapse-1 a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+    margin-top: -10px
+  }
+  #bs-example-navbar-collapse-1 a span { /* Collapsed nav menu glyph */
     font-size: 1em;
     margin-right: 5px;
   }
@@ -475,7 +481,3 @@ textarea {
 }
 
 }
-
-
-
-

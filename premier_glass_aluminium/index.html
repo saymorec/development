@@ -11,7 +11,7 @@
         <link rel="icon" href="images/favicon/favicon.ico">
 
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
@@ -53,24 +53,35 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
+                  </button>
               </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">
-                  <li id="navHomeButton"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li id="navLearnButton" class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Learn <span class="caret"></span></a>
+                    <li id="navHomeButton"><a href="index.html" onclick="$dc.loadHome();"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <!-- DROP DOWN MENU BIZ -->
+                    <!-- the dropdown menu is hidden in xtra small display -->
+                    <li id="navLearnButton" class="dropdown hidden-xs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Learn <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li><a href="#" onclick="$dc.loadAboutUs();">About us</a></li>
                         <li><a href="#" onclick="$dc.loadWhyAluminium();">Why Aluminium</a></li>
                         <li><a href="#" onclick="$dc.loadTermsAndConditions();">Terms and Conditions</a></li>
                       </ul>
                     </li>
-                    <li id="navProductsButton"><a href="#" onclick="$dc.loadProducts();"><span class="glyphicon glyphicon-gift"></span> Products</a></li>
-                    <li id="navRepairsButton"><a href="#" onclick="$dc.loadRepairs();"><span class="glyphicon glyphicon-wrench"></span> Repairs</a></li>
-                    <li id="navGalleryButton"><a href="#" onclick="$dc.loadGallery();"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+                    <!-- the dropdown is expanded on mobile by default -->
+                    <li id="navAboutUsButton" class="visible-xs"><a href="#" onclick="$dc.loadAboutUs();"><span class="glyphicon glyphicon-info-sign"></span> About us</a></li>
+                    <li id="navWhyAluminiumButton" class="visible-xs"><a href="#" onclick="$dc.loadWhyAluminium();"><span class="glyphicon glyphicon-info-sign"></span> Why Aluminium</a></li>
+                    <li id="navTermsAndConditionsButton" class="visible-xs"><a href="#" onclick="$dc.loadTermsAndConditions();"><span class="glyphicon glyphicon-info-sign"></span> Terms and Conditions</a></li>
+                    <!-- END DROP DOWN MENU BIZ -->
+                    <li id="navProductsButton"><a href="#" onclick="$dc.loadProducts();"><span class="glyphicon glyphicon-gift"></span> Products</a>
+                    </li>
+                    <li id="navRepairsButton"><a href="#" onclick="$dc.loadRepairs();"><span class="glyphicon glyphicon-wrench"></span> Repairs</a>
+                    </li>
+                    <li id="navGalleryButton"><a href="#" onclick="$dc.loadGallery();"><span class="glyphicon glyphicon-picture"></span> Gallery</a>
+                    </li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
                </div>
@@ -83,11 +94,11 @@
             <a class="btn" href="tel:0027-11-823-1270"><span class="glyphicon glyphicon-phone-alt"></span> 011-823-1270</a>
         </div> -->
 
-        <div id="call-btn" class="visible-xs">
+        <div id="phone-btn" class="visible-xs call-btn">
             <a class="btn" href="tel:0027-78-620-9318"><span class="glyphicon glyphicon-phone"></span> 078-620-9318</a>
         </div>
 
-        <div id="call-btn" class="visible-xs">
+        <div id="quote-btn" class="visible-xs call-btn">
             <a class="btn" href="#" onclick="$dc.loadQuotation();" >Request a quote</a>
         </div>
 

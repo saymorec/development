@@ -39,62 +39,34 @@ $contactForm.submit(function(e) {
 // End of contact form handlers
 
 
-
-
-
-
 // Collapsible menu button behavior...... >JQUERY
 
 
-$(function () { // Same as document.addEventListener("DOMContentLoaded"...
+// $(function () { // Same as document.addEventListener("DOMContentLoaded"...
+//
+//   // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
+//   $("#navbarToggle").blur(function (event) {
+//     var screenWidth = window.innerWidth;
+//     if (screenWidth < 768) {
+//       $("#bs-example-navbar-collapse-1").collapse('hide');
+//     }
+//   });
+//
+//   // In Firefox and Safari, the click event doesn't retain the focus
+//   // on the clicked button. Therefore, the blur event will not fire on
+//   // user clicking somewhere else in the page and the blur event handler
+//   // which is set up above will not be called.
+//   // Refer to issue #28 in the repo.
+//   // Solution: force focus on the element that the click event fired on
+//   $("#navbarToggle").click(function (event) {
+//     $(event.target).focus();
+//   });
+// });
 
-  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-  $("#navbarToggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      $("#bs-example-navbar-collapse-1").collapse('hide');
-    }
-  });
 
-  // In Firefox and Safari, the click event doesn't retain the focus
-  // on the clicked button. Therefore, the blur event will not fire on
-  // user clicking somewhere else in the page and the blur event handler
-  // which is set up above will not be called.
-  // Refer to issue #28 in the repo.
-  // Solution: force focus on the element that the click event fired on
-  $("#navbarToggle").click(function (event) {
-    $(event.target).focus();
-  });
+$(document).on('click', '#bs-example-navbar-collapse-1.in a', function(e) {
+$("#bs-example-navbar-collapse-1").removeClass("in");//.addClass("collapse");
 });
-
-
-$(function () { // Same as document.addEventListener("DOMContentLoaded"...
-
-  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-  $("#navbarToggle").blur(function (event) {
-    var screenWidth = window.innerWidth;
-    if (screenWidth < 768) {
-      $("#collapsable-nav").collapse('hide');
-    }
-  });
-
-  // In Firefox and Safari, the click event doesn't retain the focus
-  // on the clicked button. Therefore, the blur event will not fire on
-  // user clicking somewhere else in the page and the blur event handler
-  // which is set up above will not be called.
-  // Refer to issue #28 in the repo.
-  // Solution: force focus on the element that the click event fired on
-  $("#navbarToggle").click(function (event) {
-    $(event.target).focus();
-  });
-});
-
-// End of collapsible menu button behavior
-
-
-
-
-
 
 //IIFE's
 (function (global) {
@@ -119,7 +91,8 @@ var switchOffActive = function () {
 
   var ids = [
     "#navHomeButton", "#navLearnButton", "#navProductsButton", "#navRepairsButton",
-    "#navGalleryButton"];
+    "#navGalleryButton", "#navAboutUsButton", "#navWhyAluminiumButton",
+    "#navTermsAndConditionsButton"];
 
   for (var i = 0; i < ids.length; i++) {
       var classes = document.querySelector(ids[i]).className;
@@ -165,6 +138,17 @@ $ajaxUtils.sendGetRequest(
 });
 
 
+
+// Load the home view
+dc.loadHome = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+  homeHtml,
+  function (responseText) {
+    document.querySelector("#main-content")
+      .innerHTML = responseText;
+  });
+};
 
 // Load the quotation view
 dc.loadQuotation = function () {
@@ -222,7 +206,14 @@ dc.loadTermsAndConditions = function () {
   function (responseText) {
     document.querySelector("#main-content")
       .innerHTML = responseText;
-  switchOnActive ("#navLearnButton");
+
+      var screenWidth = global.innerWidth;
+      if (screenWidth < 768) {
+        switchOnActive ("#navTermsAndConditionsButton");
+      } else {
+          switchOnActive ("#navLearnButton");
+      }
+
   });
 };
 
@@ -234,7 +225,12 @@ dc.loadWhyAluminium = function () {
   function (responseText) {
     document.querySelector("#main-content")
       .innerHTML = responseText;
-  switchOnActive ("#navLearnButton");
+      var screenWidth = global.innerWidth;
+      if (screenWidth < 768) {
+        switchOnActive ("#navWhyAluminiumButton");
+      } else {
+          switchOnActive ("#navLearnButton");
+      }
   });
 };
 
@@ -246,7 +242,12 @@ dc.loadAboutUs = function () {
   function (responseText) {
     document.querySelector("#main-content")
       .innerHTML = responseText;
-  switchOnActive ("#navLearnButton");
+      var screenWidth = global.innerWidth;
+      if (screenWidth < 768) {
+        switchOnActive ("#navAboutUsButton");
+      } else {
+          switchOnActive ("#navLearnButton");
+      }
   });
 };
 
