@@ -376,6 +376,17 @@ h3 + ul.why-aluminium {
   color: black;
 }
 
+#contact-form input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+  background-color: #adff2f;
+}
+#contact-form textarea {
+  height: 300px;
+}
 input, textarea {
   margin-top: 15px;
 }
@@ -445,7 +456,8 @@ textarea {
   }
 
   #tile-header {
-    font-size: 1.5em;
+    font-size: 2em;
+    padding-left: 8%;
   }
 
   #bs-example-navbar-collapse-1 a { /* Collapsed nav menu text */

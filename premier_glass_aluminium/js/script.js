@@ -63,7 +63,6 @@ $contactForm.submit(function(e) {
 //   });
 // });
 
-
 $(document).on('click', '#bs-example-navbar-collapse-1.in a', function(e) {
 $("#bs-example-navbar-collapse-1").removeClass("in");//.addClass("collapse");
 });
@@ -158,6 +157,7 @@ dc.loadQuotation = function () {
   function (responseText) {
     document.querySelector("#main-content")
       .innerHTML = responseText;
+    switchOffActive();
   });
 };
 
