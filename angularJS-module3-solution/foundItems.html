@@ -1,0 +1,26 @@
+<div class="col-sm-12">
+
+  <div ng-if="found.length == 1" class="found">
+    Hooray! There is {{ found.length }} item that matches your choice.
+  </div>
+
+  <div ng-if="found.length > 1" class="found">
+    Hooray! There are {{ found.length }} items that matches your choice.
+  </div>
+
+	<ul>
+  		<li ng-repeat="item in found">
+  			<div>
+    			<p class="name col-sm-10">{{ item.name }}</p>
+    			<p class="short-name col-sm-2">{{ item.short_name }}</p>
+    			<p class="menu-description col-sm-12">{{ item.description }}</p>
+    			<button ng-click="onRemove({index: $index});" class="button-remove">Don't want this one!</button>
+    		</div>
+    		<hr>
+  		</li>
+  	</ul>
+
+	<div ng-if="found.length == 0" class="error">
+		Nothing found!!
+	</div>
+</div>
