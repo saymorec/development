@@ -63,7 +63,9 @@ function MenuSearchService($http, ApiBasePath) {
 
       // return processed items
       return foundItems;
-      });
+      }).catch(function (error) {
+      console.log(error);
+    });
   };
 }
 
