@@ -58,7 +58,7 @@ input[type="text"] {
 li {
   list-style: none;
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .name {
   color: #800000;
@@ -75,4 +75,7 @@ li {
   margin-left: 20px;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+button {
+  margin-left: 30px;
 }
