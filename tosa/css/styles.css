@@ -498,9 +498,6 @@ textarea {
     width: 50%;
   }
 
-  .carousel-caption {
-  font-size: 1em;
-}
 
 input {
   margin-left: 5%;
@@ -511,6 +508,19 @@ textarea {
   margin-left: 5%;
   width: 90%;
   height: 200px;
+}
+
+.carousel {
+  height: 350px;
+}
+
+.carousel .item {
+  height: 350px;
+  background-color: #328CC1;
+}
+
+  .carousel-caption {
+  font-size: 1em;
 }
 
 .carousel-inner > .item > img {
