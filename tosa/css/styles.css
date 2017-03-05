@@ -456,6 +456,29 @@ textarea {
   width: 70%;
   height: 200px;
 }
+
+.carousel {
+  height: 350px;
+}
+
+.carousel .item {
+  height: 350px;
+  background-color: #328CC1;
+}
+
+  .carousel-caption {
+  font-size: 1em;
+}
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 20;
+  left: 10%;
+  right: 0;
+  min-width: 80%;
+  height: 300px;
+}
+
 }
 
 /********** Extra small devices only **********/
@@ -473,7 +496,7 @@ textarea {
   }
   .navbar-brand h1 { /* company name */
     padding-top: 5px;
-    font-size: 5vw;
+    font-size: 1.2em;
   }
 
   #tile-header {
